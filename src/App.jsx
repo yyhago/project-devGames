@@ -3,10 +3,14 @@ import Home from "./pages/Home";
 import { ThemeContext } from "./context/ThemeContext";
 
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [theme, setTheme] = useState("light");
+
+  useEffect(()=>{
+    setTheme(localStorage.getItem('theme')?localStorage.getItem('theme'):'dark')
+  },[])
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

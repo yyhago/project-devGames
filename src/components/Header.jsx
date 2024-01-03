@@ -3,12 +3,12 @@ import { TfiSearch } from "react-icons/tfi";
 import { BsFillMoonFill } from "react-icons/bs";
 import { WiDaySunny } from "react-icons/wi";
 import { useEffect, useState } from "react";
-import { useContext } from 'react';
+import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 
 export default function Header() {
   const [toogle, setToogle] = useState(false);
-  const {theme, setTheme} = useContext(ThemeContext);
+  const { theme, setTheme } = useContext(ThemeContext);
 
   useEffect(() => {
     console.log("theme", theme);
@@ -29,14 +29,18 @@ export default function Header() {
         />
       </div>
       <div>
-        {theme == 'light' ? (
+        {theme == "light" ? (
           <BsFillMoonFill
-            onClick={() => setTheme('dark')}
+            onClick={() => {
+              setTheme("dark");localStorage.setItem('theme', 'dark');
+            }}
             className="text-[35px] bg-zinc-400 text-black p-1 rounded-full cursor-pointer"
           />
         ) : (
           <WiDaySunny
-            onClick={() => setTheme('light')}
+            onClick={() => {
+              setTheme("light");localStorage.setItem('theme','light')
+            }}
             className="text-[35px] bg-zinc-300 text-black p-1 rounded-full cursor-pointer"
           />
         )}
