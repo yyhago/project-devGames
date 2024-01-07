@@ -24,8 +24,8 @@ export default function Header() {
         <TfiSearch />
         <input
           type="text"
-          placeholder="Procurar Jogo..."
-          className="bg-transparent outline-none px-2 text-white"
+          placeholder="Busque pelo seu melhor jogo..."
+          className="bg-transparent outline-none px-2 text-white w-full"
         />
       </div>
       <div>
