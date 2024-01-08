@@ -18,7 +18,7 @@ export default function ListaGenero() {
   };
 
   return(
-    <div>
+    <div className="p-4">
       <h2 className="text-[30px] font-bold dark:text-white mb-4">Categorias</h2>
       {listaGenero.map((item,index)=>(
         <div onClick={()=>setAtivacaoIndex(index)} className={`flex gap-2 items-center mb-2 cursor-pointer hover:bg-gray-400 rounded-lg p-2 group hover:dark:bg-gray-600 ${ativacaoIndex == index?"bg-gray-400 dark:bg-gray-600":null}`} key={item.id}>
