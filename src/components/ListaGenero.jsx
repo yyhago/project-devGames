@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ApiGlobal from "../Services/ApiGlobal"; 1.7
+import ApiGlobal from "../Services/ApiGlobal";
 
 export default function ListaGenero() {
 
