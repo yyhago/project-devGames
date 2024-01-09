@@ -12,7 +12,6 @@ export default function ListaGenero() {
 
   const getGenreList = () => {
     ApiGlobal.getGenreList.then((resp) => {
-      console.log(resp.data.results)
       setListaGenero(resp.data.results)
     });
   };

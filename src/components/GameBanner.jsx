@@ -3,7 +3,7 @@ import { useEffect } from "react"
 export default function GameBanner({GameList}){
     
     useEffect(()=>{
-        console.log("Lista de Games",GameList)
+
     },[])
     
     return(

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ApiGlobal from "../Services/ApiGlobal";
 import ListaGenero from "../components/ListaGenero";
 import GameBanner from "../components/GameBanner";
+import MelhoresGames from "../components/MelhoresGames";
 
 export default function Home() {
 
@@ -24,7 +25,10 @@ export default function Home() {
       </div>
       <div className="col-span-4 md:col-span-3">
         {todosGamesLista?.length>0?
+        <div>
         <GameBanner GameList = {todosGamesLista[0]} />
+        <MelhoresGames GameList = {todosGamesLista}/>
+        </div>
         :null}
         </div>
     </div>
