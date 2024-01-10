@@ -32,14 +32,16 @@ export default function Header() {
         {theme == "light" ? (
           <BsFillMoonFill
             onClick={() => {
-              setTheme("dark");localStorage.setItem('theme', 'dark');
+              setTheme("dark");
+              localStorage.setItem("theme", "dark");
             }}
             className="text-[35px] bg-zinc-400 text-black p-1 rounded-full cursor-pointer"
           />
         ) : (
           <WiDaySunny
             onClick={() => {
-              setTheme("light");localStorage.setItem('theme','light')
+              setTheme("light");
+              localStorage.setItem("theme", "light");
             }}
             className="text-[35px] bg-zinc-300 text-black p-1 rounded-full cursor-pointer"
           />
